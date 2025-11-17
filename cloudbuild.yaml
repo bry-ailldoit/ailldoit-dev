@@ -61,7 +61,7 @@ steps:
     args:
       - run
       - deploy
-      - ailldoit-dev
+      - ailldoit-live
       - --image=${_IMAGE_NAME}
       - --region=us-central1
       - --platform=managed
