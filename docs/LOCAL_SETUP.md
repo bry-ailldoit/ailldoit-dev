@@ -67,4 +67,3 @@ Your local Google Cloud credentials have expired or are not properly authorized 
 3. Restart both the **server** and **client** terminals.
 
 ---
-trigger
