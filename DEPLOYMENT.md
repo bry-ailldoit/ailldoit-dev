@@ -91,3 +91,5 @@ The deployment is fully automated via the `deploy-staging.sh` script. This scrip
 
 - **Cause**: Often due to a missing run-time secret or an application error on startup.
 - **Solution**: Check the Cloud Run service logs for crash information. A common issue is the application trying to access an environment variable that wasn't mounted as a secret in the `gcloud run deploy` command.
+
+trigger
