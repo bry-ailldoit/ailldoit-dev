@@ -4,6 +4,8 @@ console.log('🔥 FIREBASE ADMIN: Initializing Firebase Admin SDK...');
 const serviceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_KEY;
 const explicitBucket = process.env.FIREBASE_STORAGE_BUCKET; // ✅ Allow overriding
 
+console.log('🔍 FIREBASE ADMIN: Checking for service account key in environment...', process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
+
 if (!serviceAccount) {
   console.error('❌ FIREBASE ADMIN: FIREBASE_SERVICE_ACCOUNT_KEY missing from environment');
   console.log('🔍 FIREBASE ADMIN: Available env vars:', Object.keys(process.env).filter(key => key.includes('FIREBASE')));
