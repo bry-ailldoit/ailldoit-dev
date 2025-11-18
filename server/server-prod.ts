@@ -7,6 +7,8 @@ import fs2 from "fs";
 // Load environment variables
 config2();
 
+console.log("DATABASE_URL at runtime:", process.env.DATABASE_URL?.slice(0, 10) + "...");
+
 const app = express2();
 app.use(express2.json({ limit: '50mb' }));
 app.use(express2.urlencoded({ extended: false, limit: '50mb' }));
