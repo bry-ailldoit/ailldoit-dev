@@ -1,3 +1,8 @@
+import { config } from 'dotenv';
+
+// Load environment variables
+config();
+
 import { Pool } from 'pg';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import * as schema from "@shared/schema";
@@ -41,10 +46,13 @@ export function getDB() {
   return { connection_pool, connection_db };
 }
 
-export function pool() {
-  return getDB().connection_pool;
-}
+// export function pool() {
+//   return getDB().connection_pool;
+// }
 
-export function db() {
-  return getDB().connection_db;
-}
+// export function db() {
+//   return getDB().connection_db;
+// }
+
+export const db = getDB().connection_db;
+export const pool = getDB().connection_pool;
