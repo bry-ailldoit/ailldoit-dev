@@ -1,10 +1,11 @@
 import { config } from 'dotenv';
-import express from "express";
-import http from "http";
-import { registerRoutes } from "./routes";
 
 // Load environment variables
 config();
+
+import express from "express";
+import http from "http";
+import { registerRoutes } from "./routes";
 
 const app = express();
 app.use(express.json({ limit: '50mb' }));

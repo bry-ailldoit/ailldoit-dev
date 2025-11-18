@@ -35,6 +35,8 @@ coverage/
 .env.local
 .env.*.local
 .env.docker
+.env.staging
+.env.production
 
 # Cache folders
 .npm/

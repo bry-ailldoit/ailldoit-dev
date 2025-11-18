@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "win:clear": "rimraf client/node_modules/.vite",
-    "dev-old": "set NODE_ENV=development && tsx server/index.ts",
-    "dev:server": "set NODE_ENV=development && tsx server/index.ts",
+    "dev-old": "set NODE_ENV=production && tsx server/index.ts",
+    "dev:server": "set NODE_ENV=production && tsx server/index.ts",
     "dev:client": "npx vite --force",
     "dev": "npm-run-all --parallel dev:server dev:client",
     "build:client": "vite build",
