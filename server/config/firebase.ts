@@ -1,3 +1,8 @@
+import { config } from 'dotenv';
+
+// Load environment variables
+config();
+
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { getStorage } from 'firebase-admin/storage';
