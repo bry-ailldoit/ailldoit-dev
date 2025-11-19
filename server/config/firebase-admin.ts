@@ -1,8 +1,3 @@
-import { config } from 'dotenv';
-
-// Load environment variables
-config();
-
 import admin from 'firebase-admin';
 
 console.log('🔥 FIREBASE ADMIN: Initializing Firebase Admin SDK...');

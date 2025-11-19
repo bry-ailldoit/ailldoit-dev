@@ -16,7 +16,7 @@ export function getClientEnvironment(): ClientEnvironmentConfig {
   const hostname = typeof window !== 'undefined' ? window.location.hostname : 'localhost';
   
   // Detect if we're on production domain
-  const isLiveDomain = hostname.includes('app.ailldoit.com');
+  const isLiveDomain = hostname.includes('ailldoit-live') || hostname.includes('app.ailldoit.com');
   
   // Use live keys for production domain, test keys for development
   const useTestKeys = isDevelopment || !isLiveDomain;
