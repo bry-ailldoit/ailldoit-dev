@@ -36,6 +36,9 @@ steps:
           --build-arg VITE_STRIPE_PUBLIC_KEY=$$VITE_STRIPE_PUBLIC_KEY \
           --build-arg VITE_STRIPE_STARTER_PRICE_ID=$$VITE_STRIPE_STARTER_PRICE_ID \
           --build-arg VITE_STRIPE_GROWTH_PRICE_ID=$$VITE_STRIPE_GROWTH_PRICE_ID \
+          --build-arg VITE_STRIPE_LIVE_PUBLIC_KEY=$$VITE_STRIPE_LIVE_PUBLIC_KEY \
+          --build-arg VITE_STRIPE_LIVE_STARTER_PRICE_ID=$$VITE_STRIPE_LIVE_STARTER_PRICE_ID \
+          --build-arg VITE_STRIPE_LIVE_GROWTH_PRICE_ID=$$VITE_STRIPE_LIVE_GROWTH_PRICE_ID \
           .
     id: 'docker-build'
     secretEnv:
@@ -48,6 +51,9 @@ steps:
       - 'VITE_STRIPE_PUBLIC_KEY'
       - 'VITE_STRIPE_STARTER_PRICE_ID'
       - 'VITE_STRIPE_GROWTH_PRICE_ID'
+      - 'VITE_STRIPE_LIVE_PUBLIC_KEY'
+      - 'VITE_STRIPE_LIVE_STARTER_PRICE_ID'
+      - 'VITE_STRIPE_LIVE_GROWTH_PRICE_ID'
 
   # Step 3: Push to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
