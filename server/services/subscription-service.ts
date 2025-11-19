@@ -31,7 +31,7 @@ export const SUBSCRIPTION_PLANS: Record<string, SubscriptionPlan> = {
   starter: {
     id: 'starter',
     name: 'Starter',
-    price: 19.99,
+    price: 0.99,  // Monthly starter price FOR TESTING PURPOSES
     credits: 1000,
     features: [
       '1,000 AI generation credits',
