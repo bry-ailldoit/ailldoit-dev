@@ -31,7 +31,7 @@ export const SUBSCRIPTION_PLANS: Record<string, SubscriptionPlan> = {
   starter: {
     id: 'starter',
     name: 'Starter',
-    price: 0.99,  // Monthly starter price FOR TESTING PURPOSES
+    price: 19.99,  // Monthly starter price FOR TESTING PURPOSES
     credits: 1000,
     features: [
       '1,000 AI generation credits',
@@ -212,6 +212,7 @@ class SubscriptionService {
       case 'invoice.payment_succeeded': {
         const invoice = event.data.object as Stripe.Invoice;
         if ((invoice as any).subscription) {
+          console.log('✅ Invoice payment succeeded for subscription:', (invoice as any).subscription);
           await this.resetUserCredits((invoice as any).subscription as string);
         }
         break;
@@ -280,6 +281,8 @@ class SubscriptionService {
       creditsRemaining: plan.credits,
       creditsUsed: 0,
     });
+
+    console.log('✅ User credits reset for userId:', userId, 'to plan credits:', plan.credits);
   }
 
   private async handleFailedPayment(subscriptionId: string): Promise<void> {

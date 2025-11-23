@@ -315,7 +315,8 @@ export default function SubscriptionModal({
                   <Button 
                     className="w-full" 
                     variant="outline"
-                    onClick={() => handlePlanSelect(plan.id)}
+                    // onClick={() => handlePlanSelect(plan.id)}
+                    onClick={() => window.open("https://www.ailldoit.com/contact", "_blank", "noopener,noreferrer") }
                   >
                     Contact Sales
                   </Button>
